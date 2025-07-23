@@ -1,0 +1,11 @@
+class Solution:
+    def transpose(self, mat):
+        n = len(mat)
+        m = len(mat[0])
+        result = []
+        for j in range(m):
+            new_row = []
+            for i in range(n):
+                new_row.append(mat[i][j])
+            result.append(new_row)
+        return result
