@@ -1,0 +1,17 @@
+class Solution:
+    def countZeroes(self, A, N):
+        count = 0
+        row = 0
+        col = N - 1
+        
+        while row < N and col >= 0:
+            if A[row][col] == 0:
+                # All elements to the left (including current) are zeros
+                count += (col + 1)
+                row += 1
+            else:
+                # Move left to find zeros
+                col -= 1
+        
+        return count
+
