@@ -1,1 +1,19 @@
+arr=input("enter ele of list separated by space ").split()
+l=len(arr)
 
+if l%2==0:
+    mid1=l//2
+    mid2=mid1-1
+    print("mid elements:",arr[mid2],arr[mid1])
+    print("ele in first reversed list")
+    for i in range(mid2,-1,-1):
+        print(arr[i])
+else:
+    mid=l//2
+    print("mid ele",arr[mid])
+    print("ele in second reversed:")
+    for i in range(mid,-1,-1):
+        print(arr[i])
+    print("ele in second reversed list:")
+    for i in range(l-1, mid, -1):
+        print(arr[i])
